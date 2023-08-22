@@ -22,8 +22,8 @@
                 </tr>
             </thead>
 
-            {% for article in articles %}
-                <tbody>
+            <tbody>
+                {% for article in articles %}
                     <tr>
                         <th scope="row">{{ article.ID }}</th>
                         <td><a href="/article/{{article.ID}}">{{ article.title }}</a></td>
@@ -32,8 +32,8 @@
                         <td><a href="/edit/{{article.ID}}" class="btn btn-primary">Güncelle</a></td>
                         <td><a href="/delete/{{article.ID}}" class="btn btn-danger">Sil</a></td>
                     </tr>
-                </tbody>
-            {% endfor %}
+                {% endfor %}
+            </tbody>
         </table>
     {% else %}
         <div class = "alert alert-danger">Henüz makaleniz bulunmuyor...</div>
